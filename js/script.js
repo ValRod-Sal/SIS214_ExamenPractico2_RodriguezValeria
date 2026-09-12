@@ -146,9 +146,10 @@ function inicializar_validacion_formulario() {
       privacidad_valida;
 
     if (formulario_valido) {
-      mensaje_estado.textContent = '✅ Mensaje validado correctamente. ¡Gracias por escribir, ' + campo_nombre.value.trim() + '!';
-      mensaje_estado.className = 'mensaje_estado mensaje_exito';
+      const nombre_enviado = campo_nombre.value.trim();
       formulario.reset();
+      mensaje_estado.textContent = '✅ Mensaje validado correctamente. ¡Gracias por escribir, ' + nombre_enviado + '!';
+      mensaje_estado.className = 'mensaje_estado mensaje_exito';
     } else {
       mensaje_estado.textContent = '⚠️ Revisa los campos marcados antes de enviar el formulario.';
       mensaje_estado.className = 'mensaje_estado mensaje_fallo';
