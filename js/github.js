@@ -88,7 +88,7 @@ export function inicializarGithub() {
         'exito',
         repositorios.length === 0
           ? 'El usuario no tiene repositorios públicos todavía.'
-          : `Se cargaron ${repositorios.length} repositorios públicos de ${USUARIO_GITHUB}.`
+          : `Se ${repositorios.length === 1 ? 'cargó 1 repositorio público' : `cargaron ${repositorios.length} repositorios públicos`} de ${USUARIO_GITHUB}.`
       );
     } catch (error) {
       console.error('Error al consultar la API de GitHub:', error);
