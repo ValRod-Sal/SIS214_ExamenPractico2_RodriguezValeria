@@ -345,7 +345,8 @@ button {
 /* ==========================================================================
    5. SECCIONES, TARJETAS Y TABLAS (MÓVIL: TABLAS APILADAS)
    ========================================================================== */
-main>section {
+main>section,
+main>.hero {
   padding: var(--spacing-unit);
   background-color: var(--surface-color);
   border: 1px solid var(--border-color);
@@ -376,9 +377,15 @@ main>section aside>*:last-child {
   margin-bottom: 0;
 }
 
-.hero_texto,
 .hero_contacto {
-  border: 0;
+  padding: var(--spacing-unit);
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+.hero_contacto>*:last-child {
+  margin-bottom: 0;
 }
 
 .enlaces_profesionales {
@@ -683,14 +690,13 @@ main {
 }
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-unit);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: var(--spacing-unit);
 }
 
 .hero_foto {
-  align-self: center;
-  margin-bottom: 0;
+  justify-self: center;
 }
 
 .hero_foto img {
@@ -752,27 +758,29 @@ main {
     gap: 1.5rem;
   }
 
-  main>section {
+  main>section,
+  main>.hero {
     padding: 1.5rem;
   }
 
   .hero {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    grid-template-columns: auto minmax(0, 1fr);
   }
 
   .hero_foto {
-    flex: 0 0 auto;
-    align-self: flex-start;
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    justify-self: start;
   }
 
-  .hero_texto {
-    flex: 1 1 20rem;
+  .hero>h1,
+  .hero>p,
+  .hero>blockquote {
+    grid-column: 2;
   }
 
   .hero_contacto {
-    flex: 1 1 100%;
+    grid-column: 1 / -1;
   }
 
   .habilidades,
@@ -906,7 +914,8 @@ main {
     padding: 2rem;
   }
 
-  main>section {
+  main>section,
+  main>.hero {
     grid-column: 1 / -1;
   }
 
