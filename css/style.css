@@ -639,3 +639,263 @@ textarea[aria-invalid="true"] {
     animation: none !important;
   }
 }
+
+/* ==========================================================================
+   8. MAQUETACIÓN: FLEXBOX Y CSS GRID (MÓVIL < 768px, ESTILOS BASE)
+   ========================================================================== */
+.cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.marca {
+  margin-right: auto;
+}
+
+.menu_principal {
+  flex: 1 0 100%;
+  order: 3;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--spacing-unit);
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: var(--spacing-unit);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-unit);
+}
+
+.hero_foto {
+  align-self: center;
+  margin-bottom: 0;
+}
+
+.hero_foto img {
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.habilidades {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--spacing-unit);
+}
+
+.habilidades>h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+.habilidades>article {
+  margin-bottom: 0;
+}
+
+.formulario_busqueda {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalogo_lista,
+.repos_lista {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--spacing-unit);
+}
+
+#github .boton_primario {
+  margin-bottom: var(--spacing-unit);
+}
+
+/* ==========================================================================
+   9. TABLET Y SUPERIOR (>= 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
+  .cabecera {
+    padding-inline: 1.5rem;
+  }
+
+  main {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  main>section {
+    padding: 1.5rem;
+  }
+
+  .hero {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .hero_foto {
+    flex: 0 0 auto;
+    align-self: flex-start;
+  }
+
+  .hero_texto {
+    flex: 1 1 20rem;
+  }
+
+  .hero_contacto {
+    flex: 1 1 100%;
+  }
+
+  .habilidades,
+  .catalogo_lista,
+  .repos_lista {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .formulario_busqueda {
+    flex-direction: row;
+    gap: var(--spacing-unit);
+  }
+
+  .formulario_busqueda p {
+    flex: 1 1 0;
+  }
+
+  table {
+    display: table;
+  }
+
+  thead {
+    display: table-header-group;
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+  }
+
+  tbody {
+    display: table-row-group;
+  }
+
+  tr {
+    display: table-row;
+  }
+
+  th,
+  td {
+    display: table-cell;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--border-color);
+  }
+
+  thead th {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+  }
+
+  tbody tr {
+    margin-bottom: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  td::before {
+    display: none;
+  }
+
+  form {
+    max-width: 40rem;
+  }
+}
+
+/* ==========================================================================
+   10. SOLO TABLET (768px - 1024px): MENÚ DESPLEGABLE EN DOS COLUMNAS
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu_principal ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.25rem;
+  }
+}
+
+/* ==========================================================================
+   11. ESCRITORIO (> 1024px): MENÚ EN LÍNEA Y MAQUETACIÓN EN DOS COLUMNAS
+   ========================================================================== */
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .cabecera {
+    flex-wrap: nowrap;
+    gap: var(--spacing-unit);
+  }
+
+  .marca {
+    margin-right: 0;
+    white-space: nowrap;
+  }
+
+  .boton_menu {
+    display: none;
+  }
+
+  .menu_principal {
+    flex: 1 1 auto;
+    order: 1;
+    max-height: none;
+    overflow: visible;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #boton_tema {
+    order: 2;
+    white-space: nowrap;
+  }
+
+  .menu_principal ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.15rem;
+    padding: 0;
+  }
+
+  .menu_principal a {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    padding: 2rem;
+  }
+
+  main>section {
+    grid-column: 1 / -1;
+  }
+
+  main>#certificaciones,
+  main>#idiomas {
+    grid-column: auto;
+  }
+
+  .habilidades,
+  .catalogo_lista,
+  .repos_lista {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
