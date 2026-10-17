@@ -91,7 +91,7 @@ export function inicializarGithub() {
           : `Se ${repositorios.length === 1 ? 'cargó 1 repositorio público' : `cargaron ${repositorios.length} repositorios públicos`} de ${USUARIO_GITHUB}.`
       );
     } catch (error) {
-      console.error('Error al consultar la API de GitHub:', error);
+      console.warn('No se pudo consultar la API de GitHub:', error);
       establecerEstado('error', describirError(error));
     } finally {
       clearTimeout(temporizador);
