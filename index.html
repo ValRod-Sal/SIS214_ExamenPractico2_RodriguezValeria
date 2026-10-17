@@ -1,177 +1,168 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="claro">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Currículum Vitae Profesional y Portafolio Académico de Valeria Raisa Rodríguez Salgado. Estudiante de Ingeniería de Sistemas en la Universidad Católica Boliviana 'San Pablo'. Showcase de maquetación semántica con HTML5 nativo.">
-    <meta name="keywords"
-        content="Valeria Rodriguez, Currículum Vitae, Ingeniería de Sistemas, UCB, Universidad Católica Boliviana, La Paz, Bolivia, HTML5 Nativo, Desarrollo de Software, Programación">
+        content="CV interactivo y portafolio profesional de Valeria Raisa Rodríguez Salgado, estudiante de Ingeniería de Sistemas en la Universidad Católica Boliviana 'San Pablo'.">
     <meta name="author" content="Valeria Raisa Rodríguez Salgado">
-    <title>Currículum Vitae | Valeria Raisa Rodríguez Salgado - Ingeniería de Sistemas</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+    <title>CV Interactivo | Valeria Raisa Rodríguez Salgado - Ingeniería de Sistemas</title>
 
     <link rel="stylesheet" href="css/style.css">
-
-
+    <noscript>
+        <link rel="stylesheet" href="css/sin_js.css">
+    </noscript>
+    <script type="module" src="js/main.js"></script>
 </head>
 
 <body>
 
-    <!-- ENLACE DE SALTO DIRECTO PARA NAVEGACIÓN POR TECLADO / LECTORES DE PANTALLA -->
     <a href="#main_content" class="skip_link">Saltar al contenido principal</a>
 
-    <!-- CABECERA PRINCIPAL Y NAVEGACIÓN NATIVAS -->
-    <header>
+    <header class="cabecera">
+        <a class="marca" href="#presentacion">Valeria Rodríguez</a>
 
-        <button type="button" id="theme_toggle" class="theme_toggle" aria-pressed="false">
-            🌙 Modo Claro
+        <button type="button" id="boton_tema" class="boton_icono" aria-pressed="false">
+            <span aria-hidden="true">🌙</span> Modo oscuro
         </button>
 
-        <div class="perfil_flex">
-            <h1>Valeria Raisa Rodríguez Salgado</h1>
-            <p><strong>Currículum Vitae | Ingeniería de Sistemas</strong></p>
-            
-            <figure>
-                <picture>
-                    <img src="assets/images/foto.jpeg" alt="Fotografía de perfil de Valeria Raisa Rodríguez Salgado" width="160" height="200" loading="lazy">
-                </picture>
-            </figure>
+        <button type="button" id="boton_menu" class="boton_icono boton_menu" aria-expanded="false"
+            aria-controls="menu_principal" aria-label="Abrir menú de navegación">
+            <span class="icono_hamburguesa" aria-hidden="true"></span>
+        </button>
 
-            <p><small>Estudiante de Ingeniería de Sistemas | Universidad Católica Boliviana "San Pablo" | La Paz - Bolivia</small></p>
-
-            <section id="contacto_rapido" aria-labelledby="contacto_rapido_heading">
-                <h2 id="contacto_rapido_heading">Información de Contacto</h2>
-                <address>
-                    Correo Electrónico: <a href="mailto:valeria.rs.rodriguez@gmail.com">valeria.rs.rodriguez@gmail.com</a><br>
-                    Teléfono Directo: <a href="tel:+59167004210">+591 67004210</a><br>
-                    Ubicación: La Paz, Bolivia<br>
-                    Correo Institucional: <a href="mailto:valeria.rodriguez@ucb.edu.bo">valeria.rodriguez@ucb.edu.bo</a><br>
-                </address>
-                <ul class="enlaces_profesionales">
-                    <li><a href="https://github.com/valeria-rodriguez" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                    <li><a href="https://linkedin.com/in/valeria-rodriguez" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                </ul>
-            </section>
-
-            <p>
-                Estudiante de <strong>Ingeniería de Sistemas</strong> de cuarto semestre en la
-                <abbr title="Universidad Católica Boliviana 'San Pablo'">UCB</abbr>, caracterizada por un sólido enfoque
-                en la lógica de programación, el análisis algorítmico y el diseño estructurado de software. Orientada al
-                desarrollo de soluciones tecnológicas eficientes, combinación de rigor académico con habilidades clave en la
-                <mark>resolución de problemas</mark> y gestión colaborativa de proyectos.
-            </p>
-
-            <blockquote>
-                <p>"La tecnología es una herramienta de transformación; el código limpio y estructurado es el puente hacia el futuro."</p>
-                <p class="cita_autor">— <cite>Valeria Raisa Rodríguez Salgado</cite></p>
-            </blockquote>
-        </div>
-
-        <nav aria-label="Navegación principal del currículum">
-            <ul class="nav_flex">
-                <li><a href="#perfil">Perfil Profesional</a></li>
-                <li><a href="#educacion">Educación & Formación</a></li>
-                <li><a href="#experiencia">Experiencia & Proyectos</a></li>
-                <li><a href="#habilidades">Habilidades Técnicas</a></li>
+        <nav id="menu_principal" class="menu_principal" aria-label="Navegación principal del currículum">
+            <ul>
+                <li><a href="#perfil">Perfil</a></li>
+                <li><a href="#educacion">Educación</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#certificaciones">Certificaciones</a></li>
                 <li><a href="#idiomas">Idiomas</a></li>
-                <li><a href="#proyectos">Proyectos Destacados</a></li>
-                <li><a href="#multimedia">Portafolio Multimedia</a></li>
+                <li><a href="#portafolio">Buscador</a></li>
+                <li><a href="#github">GitHub</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-
-        <hr>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main id="main_content">
+    <main id="main_content" tabindex="-1">
 
-        <section id="perfil" aria-labelledby="perfil_heading">
-            <h2 id="perfil_heading">Perfil Profesional</h2>
+        <section id="presentacion" class="hero" aria-labelledby="titulo_principal">
+            <figure class="hero_foto">
+                <img src="assets/images/foto.jpeg" alt="Fotografía de perfil de Valeria Raisa Rodríguez Salgado"
+                    width="160" height="200">
+            </figure>
+
+            <article class="hero_texto">
+                <h1 id="titulo_principal">Valeria Raisa Rodríguez Salgado</h1>
+                <p><strong>Ingeniería de Sistemas</strong> | Universidad Católica Boliviana "San Pablo" | La Paz,
+                    Bolivia</p>
+                <p>
+                    Estudiante de <strong>Ingeniería de Sistemas</strong> de cuarto semestre en la
+                    <abbr title="Universidad Católica Boliviana 'San Pablo'">UCB</abbr>, con un sólido enfoque en la
+                    lógica de programación, el análisis algorítmico y el diseño estructurado de software. Orientada al
+                    desarrollo de soluciones tecnológicas eficientes, combino rigor académico con habilidades clave en
+                    la <mark>resolución de problemas</mark> y la gestión colaborativa de proyectos.
+                </p>
+                <blockquote>
+                    <p>"La tecnología es una herramienta de transformación; el código limpio y estructurado es el
+                        puente hacia el futuro."</p>
+                    <p class="cita_autor">— <cite>Valeria Raisa Rodríguez Salgado</cite></p>
+                </blockquote>
+            </article>
+
+            <aside class="hero_contacto" aria-labelledby="contacto_rapido_titulo">
+                <h2 id="contacto_rapido_titulo">Contacto rápido</h2>
+                <address>
+                    Correo: <a href="mailto:valeria.rs.rodriguez@gmail.com">valeria.rs.rodriguez@gmail.com</a><br>
+                    Correo institucional: <a
+                        href="mailto:valeria.rodriguez@ucb.edu.bo">valeria.rodriguez@ucb.edu.bo</a><br>
+                    Teléfono: <a href="tel:+59167004210">+591 67004210</a><br>
+                    Ubicación: La Paz, Bolivia
+                </address>
+                <ul class="enlaces_profesionales">
+                    <li><a href="https://github.com/ValRod-Sal" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </li>
+                </ul>
+            </aside>
+        </section>
+
+        <section id="perfil" aria-labelledby="perfil_titulo">
+            <h2 id="perfil_titulo">Perfil Profesional</h2>
             <p>
-                ¡Hola! Soy una apasionada del desarrollo de software enfocado en la creación de soluciones digitales 
+                ¡Hola! Soy una apasionada del desarrollo de software enfocado en la creación de soluciones digitales
                 eficientes. Me defino como una profesional <em>constante, analítica y en continuo aprendizaje</em>.
             </p>
             <p>
-                Desarrolladora enfocada en la <strong>maquetación web semántica</strong> y lógica de programación. 
-                Cuento con formación académica sólida en estructuras de datos, backend con <strong>C++ y Java</strong>, 
+                Desarrolladora enfocada en la <strong>maquetación web semántica</strong> y la lógica de programación.
+                Cuento con formación académica sólida en estructuras de datos, backend con <strong>C++ y Java</strong>
                 y gestión de bases de datos relacionales.
             </p>
             <p>
-                <strong>Objetivo profesional:</strong> Formar parte de un equipo multidisciplinario donde pueda 
-                <mark>impactar positivamente a través del desarrollo de código limpio</mark>, optimizando procesos 
-                y escalando mis habilidades hacia el desarrollo Full Stack.
+                <strong>Objetivo profesional:</strong> formar parte de un equipo multidisciplinario donde pueda
+                <mark>impactar positivamente a través del desarrollo de código limpio</mark>, optimizando procesos y
+                escalando mis habilidades hacia el desarrollo Full Stack.
             </p>
 
-            <p>Explora mis principales fortalezas y competencias clave:</p>
-
             <details>
-                <summary><strong>Fortalezas y Habilidades Blandas</strong></summary>
+                <summary><strong>Fortalezas y habilidades blandas</strong></summary>
                 <ul>
-                    <li><strong>Gestión de Proyectos:</strong> Organización de tareas, priorización y cumplimiento de metas bajo metodologías estructuradas.</li>
-                    <li><strong>Trabajo en Equipo:</strong> Colaboración efectiva en grupos interdisciplinarios y <em>comunicación asertiva</em>.</li>
-                    <li><strong>Resolución de Problemas:</strong> Pensamiento analítico enfocado en descomponer problemas complejos en soluciones lógicas.</li>
+                    <li><strong>Gestión de proyectos:</strong> organización de tareas, priorización y cumplimiento de
+                        metas bajo metodologías estructuradas.</li>
+                    <li><strong>Trabajo en equipo:</strong> colaboración efectiva en grupos interdisciplinarios y
+                        <em>comunicación asertiva</em>.
+                    </li>
+                    <li><strong>Resolución de problemas:</strong> pensamiento analítico para descomponer problemas
+                        complejos en soluciones lógicas.</li>
                 </ul>
             </details>
 
             <details>
-                <summary><strong>Tecnologías & Lenguajes de Programación</strong></summary>
+                <summary><strong>Tecnologías y lenguajes de programación</strong></summary>
                 <ul>
-                    <li><strong>C++ y Java:</strong> Nivel académico avanzado.</li>
-                    <li><strong>Desarrollo Web:</strong> Maquetación web semántica (HTML5 nativo).</li>
-                    <li><strong>Bases de Datos:</strong> Fundamentos de SQL y modelado Entidad-Relación.</li>
-                    <li><mark>Control de Versiones:</mark> Git y GitHub para trabajo colaborativo.</li>
+                    <li><strong>C++ y Java:</strong> nivel académico avanzado.</li>
+                    <li><strong>Desarrollo web:</strong> maquetación web semántica (HTML5 nativo).</li>
+                    <li><strong>Bases de datos:</strong> fundamentos de SQL y modelado Entidad-Relación.</li>
+                    <li><mark>Control de versiones:</mark> Git y GitHub para trabajo colaborativo.</li>
                 </ul>
             </details>
         </section>
-        <hr>
 
-        <section id="educacion" aria-labelledby="educacion_heading">
-            <h2 id="educacion_heading">Formación Académica</h2>
+        <section id="educacion" aria-labelledby="educacion_titulo">
+            <h2 id="educacion_titulo">Formación Académica</h2>
 
             <article>
                 <h3>Ingeniería de Sistemas</h3>
                 <p>
-                    <strong>Institución:</strong> 
-                    <abbr title="Universidad Católica Boliviana 'San Pablo'">Universidad Católica Boliviana "San Pablo"</abbr>
+                    <strong>Institución:</strong>
+                    <abbr title="Universidad Católica Boliviana 'San Pablo'">Universidad Católica Boliviana "San
+                        Pablo"</abbr>
                 </p>
                 <p>
-                    <strong>Período:</strong> 
+                    <strong>Período:</strong>
                     <time datetime="2025">2025</time> - <time datetime="2026">Presente</time>
                 </p>
-                <p>
-                    <strong>Estado / Grado:</strong> Licenciatura en curso (4º Semestre)
-                </p>
+                <p><strong>Estado / Grado:</strong> Licenciatura en curso (4º Semestre)</p>
             </article>
 
             <article>
                 <h3>Bachillerato en Humanidades</h3>
-                <p>
-                    <strong>Institución:</strong> Colegio Inglés Católico
-                </p>
-                <p>
-                    <strong>Año de finalización:</strong> 
-                    <time datetime="2024">2024</time>
-                </p>
-                <p>
-                    <strong>Grado obtenido:</strong> Bachiller en Humanidades (Egresada)
-                </p>
+                <p><strong>Institución:</strong> Colegio Inglés Católico</p>
+                <p><strong>Año de finalización:</strong> <time datetime="2024">2024</time></p>
+                <p><strong>Grado obtenido:</strong> Bachiller en Humanidades (Egresada)</p>
             </article>
 
             <table>
-                <caption>Resumen de Historial Académico</caption>
+                <caption>Resumen de historial académico</caption>
                 <thead>
                     <tr>
                         <th scope="col">Carrera / Grado</th>
                         <th scope="col">Institución</th>
                         <th scope="col">Período</th>
-                        <th scope="col">Estado / Grado Obtenido</th>
+                        <th scope="col">Estado / Grado obtenido</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -179,19 +170,19 @@
                         <td data-label="Carrera / Grado">Ingeniería de Sistemas</td>
                         <td data-label="Institución">Universidad Católica Boliviana "San Pablo"</td>
                         <td data-label="Período"><time datetime="2025">2025</time> – Presente</td>
-                        <td data-label="Estado / Grado Obtenido">4º Semestre (En curso)</td>
+                        <td data-label="Estado / Grado obtenido">4º Semestre (En curso)</td>
                     </tr>
                     <tr>
                         <td data-label="Carrera / Grado">Bachillerato en Humanidades</td>
                         <td data-label="Institución">Colegio Inglés Católico</td>
                         <td data-label="Período"><time datetime="2024">2024</time></td>
-                        <td data-label="Estado / Grado Obtenido">Bachiller (Egresada)</td>
+                        <td data-label="Estado / Grado obtenido">Bachiller (Egresada)</td>
                     </tr>
                 </tbody>
             </table>
 
-            <aside>
-                <h4>Materias de Enfoque Principal (4º Semestre)</h4>
+            <aside aria-labelledby="materias_titulo">
+                <h3 id="materias_titulo">Materias de enfoque principal (4º Semestre)</h3>
                 <ul>
                     <li>Cálculo II</li>
                     <li>Programación 2</li>
@@ -201,26 +192,27 @@
             </aside>
         </section>
 
-        <hr>
-
-        <section id="experiencia" aria-labelledby="experiencia_heading">
-            <h2 id="experiencia_heading">Experiencia Profesional & Proyectos</h2>
+        <section id="experiencia" aria-labelledby="experiencia_titulo">
+            <h2 id="experiencia_titulo">Experiencia Profesional y Proyectos</h2>
 
             <article>
                 <h3>Técnica de Computadoras</h3>
                 <p><strong>Cargo:</strong> Técnico de Mantenimiento y Optimización</p>
                 <p><strong>Empresa/Institución:</strong> Servicio Independiente / Proyecto Personal</p>
                 <p>
-                    <strong>Período:</strong> 
-                    <time datetime="2024-06">Junio 2024</time> – <time datetime="2024-08">Agosto 2024</time> (2 meses)
+                    <strong>Período:</strong>
+                    <time datetime="2024-06">Junio 2024</time> – <time datetime="2024-08">Agosto 2024</time> (2
+                    meses)
                 </p>
                 <p>
-                    <strong>Descripción de funciones:</strong> Diagnóstico de hardware y software en equipos de cómputo, 
-                    ejecución de mantenimiento preventivo/correctivo y optimización del sistema para extender la vida útil del equipo.
+                    <strong>Descripción de funciones:</strong> diagnóstico de hardware y software en equipos de
+                    cómputo, ejecución de mantenimiento preventivo/correctivo y optimización del sistema para
+                    extender la vida útil del equipo.
                 </p>
                 <p>
-                    <strong>Principales logros:</strong> Implementación exitosa de herramientas de diagnóstico de rendimiento 
-                    en diversos sistemas operativos, logrando una mejora notable en la velocidad de procesamiento de los equipos atendidos.
+                    <strong>Principales logros:</strong> implementación exitosa de herramientas de diagnóstico de
+                    rendimiento en diversos sistemas operativos, logrando una mejora notable en la velocidad de
+                    procesamiento de los equipos atendidos.
                 </p>
             </article>
 
@@ -229,46 +221,47 @@
                 <p><strong>Cargo:</strong> Desarrolladora de Software Desktop</p>
                 <p><strong>Empresa/Institución:</strong> Evento Académico Workshop UCB</p>
                 <p>
-                    <strong>Período:</strong> 
+                    <strong>Período:</strong>
                     <time datetime="2026-06">Junio 2026</time> – <time datetime="2026-08">Agosto 2026</time>
                 </p>
                 <p>
-                    <strong>Descripción de funciones:</strong> Diseño y desarrollo de un programa de recomendación personalizada de viajes 
-                    basado en los gustos y preferencias del usuario. Construido con <strong>Java</strong> y <strong>JavaFX</strong> para la interfaz gráfica.
+                    <strong>Descripción de funciones:</strong> diseño y desarrollo de un programa de recomendación
+                    personalizada de viajes basado en los gustos y preferencias del usuario. Construido con
+                    <strong>Java</strong> y <strong>JavaFX</strong> para la interfaz gráfica.
                 </p>
                 <p>
-                    <strong>Principales logros:</strong> Selección e integración del proyecto para su presentación oficial en el evento <em>Workshop</em>, 
-                    además de estructurar una interfaz intuitiva y dinámica para el usuario.
+                    <strong>Principales logros:</strong> selección e integración del proyecto para su presentación
+                    oficial en el evento <em>Workshop</em>, además de estructurar una interfaz intuitiva y dinámica
+                    para el usuario.
                 </p>
             </article>
 
             <article>
                 <h3>Diseñadora de Base de Datos – Proyecto "Mercado Popular"</h3>
-                <p><strong>Cargo:</strong> Arquitecta de Base de Datos & Backend</p>
+                <p><strong>Cargo:</strong> Arquitecta de Base de Datos y Backend</p>
                 <p><strong>Empresa/Institución:</strong> Asignatura Base de Datos II / Workshop UCB</p>
                 <p>
-                    <strong>Período:</strong> 
+                    <strong>Período:</strong>
                     <time datetime="2026-03">Marzo 2026</time> – <time datetime="2026-05">Mayo 2026</time>
                 </p>
                 <p>
-                    <strong>Descripción de funciones:</strong> Modelado e implementación de un sistema de gestión para mercados informales/populares 
-                    utilizando <strong>MySQL</strong>. Control de ingreso de productos, inventario y administración general de registros.
+                    <strong>Descripción de funciones:</strong> modelado e implementación de un sistema de gestión
+                    para mercados informales/populares utilizando <strong>MySQL</strong>. Control de ingreso de
+                    productos, inventario y administración general de registros.
                 </p>
                 <p>
-                    <strong>Principales logros:</strong> Optimización de consultas SQL complejas para la entrada de mercancía en tiempo real y 
-                    presentación del proyecto como caso práctico destacado en el evento <em>Workshop</em>.
+                    <strong>Principales logros:</strong> optimización de consultas SQL complejas para la entrada de
+                    mercancía en tiempo real y presentación del proyecto como caso práctico destacado en el evento
+                    <em>Workshop</em>.
                 </p>
             </article>
         </section>
 
-        <hr>
+        <section id="habilidades" class="habilidades" aria-labelledby="habilidades_titulo">
+            <h2 id="habilidades_titulo">Habilidades Técnicas</h2>
 
-        <section id="habilidades" aria-labelledby="habilidades_tecnicas_heading">
-            <h2 id="habilidades_tecnicas_heading">Habilidades Técnicas</h2>
-
-            <div class="habilidades_grid">
             <article>
-                <h3>Lenguajes & Tecnologías</h3>
+                <h3>Lenguajes y tecnologías</h3>
                 <ul>
                     <li>
                         <span>Java:</span>
@@ -279,8 +272,8 @@
                         <meter value="0.75" min="0" max="1" low="0.4" high="0.7" optimum="0.9">75%</meter>
                     </li>
                     <li>
-                        <span>HTML5 Semántico:</span>
-                        <meter value="0.7" min="0" max="1" low="0.4" high="0.7" optimum="0.7">70%</meter>
+                        <span>HTML5 semántico:</span>
+                        <meter value="0.7" min="0" max="1" low="0.4" high="0.7" optimum="0.9">70%</meter>
                     </li>
                     <li>
                         <span>MySQL / SQL:</span>
@@ -294,62 +287,61 @@
             </article>
 
             <article>
-                <h3>Herramientas de Desarrollo</h3>
+                <h3>Herramientas de desarrollo</h3>
                 <ul>
-                    <li>MySQL Workbench / Administrador BD</li>
-                    <li>Entornos de Desarrollo IDEs (NetBeans / IntelliJ IDEA)</li>
-                    <li>Herramientas de Diagnóstico de Hardware & Sistemas Operativos</li>
+                    <li>MySQL Workbench / Administrador de BD</li>
+                    <li>Entornos de desarrollo IDE (NetBeans / IntelliJ IDEA)</li>
+                    <li>Herramientas de diagnóstico de hardware y sistemas operativos</li>
                 </ul>
             </article>
 
             <article>
-                <h3>Habilidades Profesionales</h3>
+                <h3>Habilidades profesionales</h3>
                 <ul>
                     <li>Resolución analítica de problemas y lógica algorítmica</li>
                     <li>Gestión de proyectos y organización por metas</li>
                     <li>Comunicación asertiva y trabajo colaborativo</li>
                 </ul>
             </article>
-            </div>
         </section>
 
-        <hr>
-        <section id="certificaciones" aria-labelledby="certificaciones_heading">
-            <h2 id="certificaciones_heading">Certificaciones, Cursos & Seminarios</h2>
+        <section id="certificaciones" aria-labelledby="certificaciones_titulo">
+            <h2 id="certificaciones_titulo">Certificaciones, Cursos y Seminarios</h2>
 
             <article>
-                <h3>Seminarios & Eventos</h3>
+                <h3>Seminarios y eventos</h3>
                 <ul>
                     <li>
                         <strong>Seminario de Inteligencia Artificial (Google IA)</strong> – Asistente
                         <br>
-                        <small>Organizado por Google / Evento Tecnológico | <time datetime="2025-01">Enero 2025</time></small>
+                        <small>Organizado por Google / Evento Tecnológico | <time datetime="2025-01">Enero
+                                2025</time></small>
                     </li>
                 </ul>
             </article>
 
             <article>
-                <h3>Cursos & Formación Independiente</h3>
+                <h3>Cursos y formación independiente</h3>
                 <ul>
                     <li>
                         <strong>Curso Completo de Programación en C++ y Estructuras de Datos</strong>
                         <br>
-                        <small>Modalidad Autodidacta (YouTube) | <time datetime="2024">2024</time></small>
+                        <small>Modalidad autodidacta (YouTube) | <time datetime="2024">2024</time></small>
                     </li>
                     <li>
                         <strong>Fundamentos de Programación Orientada a Objetos en Java</strong>
                         <br>
-                        <small>Modalidad Autodidacta (YouTube) | <time datetime="2024">2024</time></small>
+                        <small>Modalidad autodidacta (YouTube) | <time datetime="2024">2024</time></small>
                     </li>
                     <li>
                         <strong>Maquetación Web Semántica con HTML5 y CSS3 Nativo</strong>
                         <br>
-                        <small>Modalidad Autodidacta (YouTube) | <time datetime="2025">2025</time></small>
+                        <small>Modalidad autodidacta (YouTube) | <time datetime="2025">2025</time></small>
                     </li>
                     <li>
                         <strong>Administración y Consultas Básicas en MySQL</strong>
                         <br>
-                        <small>Modalidad Autodidacta (YouTube) | <time datetime="2025">2025</time></small>
+                        <small>Modalidad autodidacta (YouTube) | <time datetime="2025">2025</time></small>
                     </li>
                 </ul>
             </article>
@@ -360,16 +352,15 @@
                     <li>
                         <strong>Presentación de Proyectos "WayFinder" y "Mercado Popular"</strong>
                         <br>
-                        <small>Workshop Universitario UCB (En proceso de certificación) | <time datetime="2025-11">Noviembre 2025</time></small>
+                        <small>Workshop Universitario UCB (en proceso de certificación) | <time
+                                datetime="2025-11">Noviembre 2025</time></small>
                     </li>
                 </ul>
             </article>
         </section>
 
-        <hr>
-
-        <section id="idiomas" aria-labelledby="idiomas_heading">
-            <h2 id="idiomas_heading">Idiomas</h2>
+        <section id="idiomas" aria-labelledby="idiomas_titulo">
+            <h2 id="idiomas_titulo">Idiomas</h2>
 
             <table>
                 <caption>Nivel de dominio de idiomas</caption>
@@ -398,67 +389,58 @@
             </table>
         </section>
 
+        <section id="portafolio" aria-labelledby="portafolio_titulo">
+            <h2 id="portafolio_titulo">Buscador del Portafolio</h2>
+            <p>Filtra mis proyectos, habilidades y certificaciones escribiendo una palabra clave.</p>
 
-        <hr>
-        <section id="proyectos" aria-labelledby="proyectos_heading">
-            <h2 id="proyectos_heading">Proyectos Destacados</h2>
+            <form id="formulario_busqueda" class="formulario_busqueda" role="search" novalidate>
+                <p>
+                    <label for="campo_busqueda">Buscar:</label>
+                    <input type="search" id="campo_busqueda" name="busqueda" placeholder="Ej. Java, MySQL, Workshop..."
+                        autocomplete="off" aria-controls="catalogo_lista">
+                </p>
+                <p>
+                    <label for="campo_categoria">Categoría:</label>
+                    <select id="campo_categoria" name="categoria" aria-controls="catalogo_lista">
+                        <option value="todas" selected>Todas</option>
+                        <option value="Proyecto">Proyectos</option>
+                        <option value="Habilidad">Habilidades</option>
+                        <option value="Certificación">Certificaciones</option>
+                    </select>
+                </p>
+            </form>
 
-            <article>
-                <h3>WayFinder – Sistema de Recomendación de Viajes</h3>
-                <p>
-                    <strong>Descripción:</strong> Aplicación de escritorio diseñada para recomendar destinos turísticos y rutas personalizadas según los gustos, presupuesto y preferencias especificadas por el usuario.
-                </p>
-                <p>
-                    <strong>Tecnologías utilizadas:</strong> Java, JavaFX (Interfaz Gráfica), Estructuras de Datos Avanzadas.
-                </p>
-                <p>
-                    <strong>Rol desempeñado:</strong> Desarrolladora Principal Frontend & Lógica Backend.
-                </p>
-                <p>
-                    <strong>Resultado obtenido:</strong> Proyecto seleccionado de forma destacada para su presentación oficial en el evento universitario <em>Workshop UCB</em>, logrando una interfaz dinámica e intuitiva.
-                </p>
-            </article>
-
-            <article>
-                <h3>Mercado Popular – Sistema de Gestión e Inventario</h3>
-                <p>
-                    <strong>Descripción:</strong> Sistema integral de base de datos orientado a la administración de mercados informales o populares, permitiendo controlar la entrada de mercancía, registro de productos y gestión de vendedores.
-                </p>
-                <p>
-                    <strong>Tecnologías utilizadas:</strong> MySQL, SQL Nativo, Modelado Entidad-Relación, Lenguaje de Programación Integrado (Java).
-                </p>
-                <p>
-                    <strong>Rol desempeñado:</strong> Arquitecta de Base de Datos y Diseñadora de Consultas.
-                </p>
-                <p>
-                    <strong>Resultado obtenido:</strong> Implementación exitosa de procedimientos para el registro de productos en tiempo real y selección para el evento <em>Workshop UCB</em> en la materia de Base de Datos II.
-                </p>
-            </article>
+            <p id="catalogo_contador" class="contador_resultados" role="status" aria-live="polite"></p>
+            <ul id="catalogo_lista" class="catalogo_lista"></ul>
         </section>
 
-        <hr>
+        <section id="github" class="seccion_github" data-estado="cargando" aria-labelledby="github_titulo"
+            aria-busy="true">
+            <h2 id="github_titulo">Repositorios en GitHub</h2>
+            <p>Datos obtenidos en tiempo real desde la API REST pública de GitHub.</p>
 
-        <section id="multimedia" aria-labelledby="multimedia_heading">
-            <h2 id="multimedia_heading">Portafolio Multimedia</h2>
+            <p id="github_estado" class="github_estado" role="status" aria-live="polite">Cargando repositorios...</p>
+            <button type="button" id="boton_reintentar" class="boton_primario" hidden>Reintentar</button>
+            <ul id="repos_lista" class="repos_lista"></ul>
+        </section>
+
+        <section id="multimedia" aria-labelledby="multimedia_titulo">
+            <h2 id="multimedia_titulo">Portafolio Multimedia</h2>
 
             <article>
-                <h3>Captura del Proyecto "WayFinder"</h3>
+                <h3>Captura del proyecto "WayFinder"</h3>
                 <figure>
-                    <picture>
-                        
-                        <img src="assets/images/WayFinder.jpg" 
-                             alt="Interfaz de usuario del proyecto WayFinder mostrando el menú inicio" 
-                             loading="lazy" 
-                             width="800" 
-                             height="450">
-                    </picture>
-                    <figcaption>Demostración gráfica de la interfaz desarrollada en JavaFX para el proyecto WayFinder.</figcaption>
+                    <img src="assets/images/WayFinder.jpg"
+                        alt="Interfaz de usuario del proyecto WayFinder mostrando la pantalla de inicio de sesión"
+                        loading="lazy" width="800" height="450">
+                    <figcaption>Demostración gráfica de la interfaz desarrollada en JavaFX para el proyecto
+                        WayFinder.</figcaption>
                 </figure>
             </article>
 
             <article>
-                <h3>Audio de Presentación Profesional</h3>
-                <p>Escucha un breve audio presentandome:</p>
+                <h3>Audio de presentación profesional</h3>
+                <p>Escucha un breve audio presentándome:</p>
                 <figure>
                     <audio controls preload="metadata">
                         <source src="assets/Audio/presentacion.ogg" type="audio/ogg">
@@ -469,46 +451,48 @@
             </article>
 
             <article>
-                <h3>Demostración en Video – Proyecto "Mercado Popular"</h3>
+                <h3>Demostración en video – Proyecto "Mercado Popular"</h3>
                 <p>Video de funcionamiento y flujo de datos registrado en MySQL para el evento Workshop UCB:</p>
                 <figure>
                     <video controls poster="assets/images/MercadoPopular.jpg" preload="metadata">
                         <source src="assets/Video/proyecto.mp4" type="video/mp4">
                         Tu navegador no admite la reproducción de videos HTML5.
                     </video>
-                    <figcaption>Demostración práctica del registro e ingreso de productos al sistema del mercado.</figcaption>
+                    <figcaption>Demostración práctica del registro e ingreso de productos al sistema del mercado.
+                    </figcaption>
                 </figure>
             </article>
         </section>
 
+        <section id="contacto" aria-labelledby="contacto_titulo">
+            <h2 id="contacto_titulo">Contacto</h2>
+            <p>¿Tienes alguna consulta o propuesta de colaboración? Envíame un mensaje a través del siguiente
+                formulario:</p>
 
-
-        <hr>
-        <section id="contacto" aria-labelledby="contacto_heading_main">
-            <h2 id="contacto_heading_main">Contacto</h2>
-            <p>¿Tienes alguna consulta o propuesta de colaboración? Envíame un mensaje a través del siguiente formulario:</p>
-
-            <form action="#" method="post" aria-labelledby="contacto_heading_main" id="formulario_contacto" novalidate>
+            <form id="formulario_contacto" action="#" method="post" aria-labelledby="contacto_titulo" novalidate>
                 <p>
-                    <label for="nombre">Nombre completo:</label><br>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Pérez" required autocomplete="name" aria-describedby="nombre_error">
-                    <span class="mensaje_error" id="nombre_error" role="alert"></span>
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Pérez" required minlength="3"
+                        autocomplete="name" aria-describedby="nombre_error">
+                    <span class="mensaje_error" id="nombre_error"></span>
                 </p>
 
                 <p>
-                    <label for="email">Correo electrónico:</label><br>
-                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required autocomplete="email" aria-describedby="email_error">
-                    <span class="mensaje_error" id="email_error" role="alert"></span>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required
+                        autocomplete="email" aria-describedby="email_error">
+                    <span class="mensaje_error" id="email_error"></span>
                 </p>
 
                 <p>
-                    <label for="telefono">Teléfono de contacto:</label><br>
-                    <input type="tel" id="telefono" name="telefono" placeholder="+591 70000000" pattern="[+0-9\s-]{8,15}" autocomplete="tel" aria-describedby="telefono_error">
-                    <span class="mensaje_error" id="telefono_error" role="alert"></span>
+                    <label for="telefono">Teléfono de contacto (opcional):</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+591 70000000"
+                        pattern="[+0-9\s\-]{8,15}" autocomplete="tel" aria-describedby="telefono_error">
+                    <span class="mensaje_error" id="telefono_error"></span>
                 </p>
 
                 <p>
-                    <label for="motivo">Motivo de contacto:</label><br>
+                    <label for="motivo">Motivo de contacto:</label>
                     <select id="motivo" name="motivo" required aria-describedby="motivo_error">
                         <option value="" disabled selected>Selecciona una opción</option>
                         <option value="oferta-laboral">Propuesta / Oferta laboral</option>
@@ -516,39 +500,42 @@
                         <option value="consulta-academica">Consulta académica / Workshop</option>
                         <option value="otro">Otro motivo</option>
                     </select>
-                    <span class="mensaje_error" id="motivo_error" role="alert"></span>
+                    <span class="mensaje_error" id="motivo_error"></span>
                 </p>
 
                 <p>
-                    <label for="mensaje">Mensaje:</label><br>
-                    <textarea id="mensaje" name="mensaje" rows="5" cols="40" placeholder="Escribe tu mensaje aquí..." required aria-describedby="mensaje_error"></textarea>
-                    <span class="mensaje_error" id="mensaje_error" role="alert"></span>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required
+                        minlength="10" aria-describedby="mensaje_error"></textarea>
+                    <span class="mensaje_error" id="mensaje_error"></span>
                 </p>
 
-                <p>
-                    <input type="checkbox" id="privacidad" name="privacidad" required aria-describedby="privacidad_error">
-                    <label for="privacidad">Acepto el tratamiento de mis datos de contacto para responder esta solicitud.</label>
-                    <span class="mensaje_error" id="privacidad_error" role="alert"></span>
+                <p class="campo_check">
+                    <input type="checkbox" id="privacidad" name="privacidad" required
+                        aria-describedby="privacidad_error">
+                    <label for="privacidad">Acepto el tratamiento de mis datos de contacto para responder esta
+                        solicitud.</label>
+                    <span class="mensaje_error" id="privacidad_error"></span>
                 </p>
 
-                <p>
-                    <button type="submit">Enviar mensaje</button>
-                    <button type="reset">Limpiar formulario</button>
+                <p class="acciones_formulario">
+                    <button type="submit" class="boton_primario">Enviar mensaje</button>
+                    <button type="reset" class="boton_secundario">Limpiar formulario</button>
                 </p>
 
-                <p class="mensaje_estado" id="mensaje_estado" role="status" aria-live="polite"></p>
+                <p id="mensaje_estado" class="mensaje_estado" role="status" aria-live="polite"></p>
             </form>
         </section>
 
     </main>
 
-    <hr>
-    <footer>
+    <footer class="pie">
         <p><small>&copy; 2026 Valeria Raisa Rodríguez Salgado. Todos los derechos reservados.</small></p>
-        <p><small>Desarrollado como Showcase de Maquetación Nativa HTML5 sin dependencias CSS/JS para la Universidad Católica Boliviana "San Pablo".</small></p>
-        <p><small>Fecha de última actualización del documento: <time datetime="2026-08-20">20 de Agosto de 2026</time></small></p>
+        <p><small>Examen Práctico 2 – Tecnologías Web I (SIS-214) | Universidad Católica Boliviana "San
+                Pablo".</small></p>
+        <p><small>Última actualización: <time datetime="2026-10-16">16 de octubre de 2026</time></small></p>
     </footer>
 
-    <script src="js/script.js"></script>
 </body>
+
 </html>
