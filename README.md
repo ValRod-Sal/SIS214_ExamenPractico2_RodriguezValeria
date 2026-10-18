@@ -5,7 +5,7 @@
 Landing page personal desarrollada para el **Examen Práctico 2** de *Tecnologías Web I (SIS-214)*, Unidad II: Desarrollo de Interfaces Dinámicas con JavaScript.
 
 - **Sitio en producción:** https://valrod-sal.github.io/SIS214_ExamenPractico2_RodriguezValeria/
-- **Repositorio:** https://github.com/ValRod-Sal/SIS214_ExamenPractico2_RodriguezValeria
+- **Repositorio:** https://github.com/ValRod-Sal/hoja-vida-Rodriguez-Valeria.git
 
 ## Tecnologías utilizadas
 
